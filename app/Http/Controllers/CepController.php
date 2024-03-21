@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Aluno;
+use App\Models\Cep;
 use Illuminate\Http\Request;
 
-class AlunoController extends Controller
+class CepController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class AlunoController extends Controller
      */
     public function index()
     {
-        $aluno = Aluno::all();
-
-        return $aluno;
+        return view('cep');
     }
 
     /**
@@ -37,31 +35,27 @@ class AlunoController extends Controller
      */
     public function store(Request $request)
     {
-        // return 'Presente - Store';
-        // dd($request->all());
-        $aluno = Aluno::create($request->all());
-
-        return $aluno;
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Aluno  $aluno
+     * @param  \App\Models\Cep  $cep
      * @return \Illuminate\Http\Response
      */
-    public function show(Aluno $aluno)
+    public function show(Cep $cep)
     {
-        return $aluno;
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Aluno  $aluno
+     * @param  \App\Models\Cep  $cep
      * @return \Illuminate\Http\Response
      */
-    public function edit(Aluno $aluno)
+    public function edit(Cep $cep)
     {
         //
     }
@@ -70,30 +64,22 @@ class AlunoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Aluno  $aluno
+     * @param  \App\Models\Cep  $cep
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Aluno $aluno)
+    public function update(Request $request, Cep $cep)
     {
-        // // return 'Update';
-        // print_r($request->all()); //Dados novos
-        // echo '<hr>';
-        // print_r($aluno->getAttributes()); // Dados Antigos
-
-        $aluno->update($request->all());
-        return $aluno;
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Aluno  $aluno
+     * @param  \App\Models\Cep  $cep
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Aluno $aluno)
+    public function destroy(Cep $cep)
     {
-       $aluno->delete();
-
-       return ['msg' => 'O registro foi removido com sucésso'];
+        //
     }
 }
